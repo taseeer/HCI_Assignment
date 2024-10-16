@@ -1,0 +1,202 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #7fdc82;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 150px; /* Adjusted for laptops */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between navigation items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li .buy-tickets {
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 10px 20px; /* Padding adjusted for laptops */
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5em; /* Larger font size for laptops */
+    margin-bottom: 20px;
+}
+
+.hero-content .cta-btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 20px; /* Button size for laptops */
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.ticket-form {
+    margin-top: 30px;
+}
+
+.ticket-form form {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ticket-form button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Amenities Section */
+.amenities {
+    padding: 40px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.amenities-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 40px;
+    text-align: center;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-around;
+}
+
+.review {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 30%;
+}
+
+/* Footer */
+footer {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: left;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Mobile and Tablet Styles (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Adjust logo size */
+    header .logo img {
+        width: 120px;
+    }
+
+    /* Stack nav items vertically */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Hero section adjustments */
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-content .cta-btn {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+
+    /* Stack form fields vertically */
+    .ticket-form form {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    /* Amenities Section - Stack vertically */
+    .amenities-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Stack reviews vertically */
+    .reviews {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .review {
+        width: 100%;
+    }
+
+    /* Stack footer content vertically */
+    footer .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Larger screen (min-width: 769px) */
+@media (min-width: 769px) {
+    /* General adjustments for larger screens (laptops/desktops) */
+    nav ul {
+        flex-direction: row;
+    }
+
+    .ticket-form form {
+        flex-direction: row;
+        max-width: 80%;
+    }
+
+    .amenities-list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .reviews {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

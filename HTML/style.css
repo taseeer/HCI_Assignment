@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     color: #333;
     font-family: 'Arial', sans-serif;
 }
@@ -22,7 +22,7 @@ header {
 }
 
 header .logo img {
-    width: 150px; /* Adjusted for laptops */
+    width: 150px; /* Default size for larger screens */
 }
 
 nav ul {
@@ -40,7 +40,7 @@ nav ul li a {
 nav ul li .buy-tickets {
     background-color: #2e7d32;
     color: #fff;
-    padding: 10px 20px; /* Padding adjusted for laptops */
+    padding: 10px 20px;
     border-radius: 5px;
 }
 
@@ -52,34 +52,66 @@ nav ul li .buy-tickets {
 }
 
 .hero-content h1 {
-    font-size: 2.5em; /* Larger font size for laptops */
+    font-size: 2.5em; /* Larger font size for larger screens */
     margin-bottom: 20px;
+    margin-right: 40px;
 }
 
 .hero-content .cta-btn {
     background-color: #28a745;
     color: #fff;
-    padding: 12px 20px; /* Button size for laptops */
+    padding: 12px 20px;
     border-radius: 5px;
     font-size: 1.2em;
 }
 
+/* Ticket Form Styles */
 .ticket-form {
-    margin-top: 30px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    transform: translateY(-50%);
 }
 
-.ticket-form form {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+/* Form Fields */
+.ticket-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ticket-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.ticket-form select, .ticket-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .ticket-form button {
-    background-color: #28a745;
-    color: #fff;
+    width: 100%;
     padding: 10px;
+    background-color: #007bff;
+    color: white;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.ticket-form button:hover {
+    background-color: #0056b3;
 }
 
 /* Amenities Section */
@@ -87,6 +119,7 @@ nav ul li .buy-tickets {
     padding: 40px;
     text-align: center;
     background-color: #f0f0f0;
+    margin-top: 190px;
 }
 
 .amenities-list {
@@ -149,10 +182,11 @@ footer .footer-content {
     }
 
     /* Stack form fields vertically */
-    .ticket-form form {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
+    .ticket-form {
+        position: static;
+        width: 90%;
+        margin: 0 auto;
+        transform: none;
     }
 
     /* Amenities Section - Stack vertically */
@@ -185,9 +219,10 @@ footer .footer-content {
         flex-direction: row;
     }
 
-    .ticket-form form {
-        flex-direction: row;
-        max-width: 80%;
+    .ticket-form {
+        position: absolute;
+        right: 10%;
+        width: 300px;
     }
 
     .amenities-list {
